@@ -6,12 +6,14 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
+
 export default function Otp() {
   const [otp, setOtp] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false)
   const router = useRouter();
+  const api = process.env.NEXT_PUBLIC_API;
 
   useEffect(() => {
     const message = localStorage.getItem("gmail") || "";
@@ -39,7 +41,7 @@ export default function Otp() {
     if (email && otp) {
       try {
         const res = await axios.post(
-          "http://localhost:1300/verify",
+          `${api}/verify`,
           {
             gmail: email,
             otp,
@@ -91,11 +93,11 @@ export default function Otp() {
               <p className="text-sm sm:text-base lg:text-lg">Secure account protection</p>
             </div>
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
-              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] flex-shrink-0" />
+              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] shrink-0" />
               <p className="text-sm sm:text-base lg:text-lg">One-time setup only</p>
             </div>
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
-              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] flex-shrink-0" />
+              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] shrink-0" />
               <p className="text-sm sm:text-base lg:text-lg">Your data stays private</p>
             </div>
           </div>
@@ -128,14 +130,14 @@ export default function Otp() {
             <input
               type="number"
               id="OTP"
-              className="w-full max-w-xs sm:w-55 p-2.5 sm:p-3 border border-amber-200 sm:border-2 rounded-lg bg-amber-50 focus:outline-none focus:border-amber-500 focus:bg-white transition-all text-center text-lg"
+              className="w-full max-w-xs sm:w-55 p-2 sm:p-3 border border-amber-200 sm:border-2 rounded-lg bg-amber-50 focus:outline-none focus:border-amber-500 focus:bg-white transition-all text-center text-lg"
               onChange={(e) => setOtp(e.target.value)}
               placeholder="000000"
             />
           </div>
           
           <button
-            className="w-full max-w-xs sm:w-55 bg-gradient-to-l from-amber-500 to-amber-600 py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-5 text-white font-medium cursor-pointer disabled:cursor-not-allowed disabled:opacity-70 hover:shadow-lg transition-all duration-200"
+            className="w-full max-w-xs sm:w-55 bg-linear-to-l from-amber-500 to-amber-600 py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-5 text-white font-medium cursor-pointer disabled:cursor-not-allowed disabled:opacity-70 hover:shadow-lg transition-all duration-200"
             onClick={btnFun}
             disabled={loading}
           >

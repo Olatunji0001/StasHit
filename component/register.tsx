@@ -13,6 +13,7 @@ export default function Register() {
   const [error, setError] = useState("");
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const api = process.env.NEXT_PUBLIC_API;
 
   useEffect(() => {
     if (error) {
@@ -29,7 +30,7 @@ export default function Register() {
 
     if (fullname && email && password) {
       try {
-        const res = await axios.post("http://localhost:1300/register", {
+        const res = await axios.post(`${api}/register`, {
           fullname,
           gmail: email,
           password,
@@ -63,7 +64,7 @@ export default function Register() {
   <div className="min-h-screen bg-[#FEF7DC] flex items-center justify-center p-4 sm:p-6">
     <div className="w-full max-w-5xl flex flex-col lg:flex-row rounded-lg sm:rounded-xl lg:rounded-2xl shadow-lg sm:shadow-xl lg:shadow-2xl overflow-hidden">
       {/* Left Panel - Brand & Features */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-b from-amber-500 to-amber-600 text-white flex flex-col justify-center items-center p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6">
+      <div className="w-full lg:w-1/2 bg-linear-to-b from-amber-500 to-amber-600 text-white flex flex-col justify-center items-center p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6">
         <Link href={"/"}>
           <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">StasHit</p>
         </Link>
@@ -72,25 +73,25 @@ export default function Register() {
         </p>
         <div className="w-full max-w-xs sm:max-w-sm space-y-3 sm:space-y-4 mt-4 sm:mt-6 lg:mt-8">
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
               <GiCheckMark className="text-sm sm:text-base" />
             </div>
             <p className="text-sm sm:text-base">Backup all your contacts</p>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
               <GiCheckMark className="text-sm sm:text-base" />
             </div>
             <p className="text-sm sm:text-base">Access your contacts from anywhere</p>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
               <GiCheckMark className="text-sm sm:text-base" />
             </div>
             <p className="text-sm sm:text-base">Instant recovery on any device</p>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
               <GiCheckMark className="text-sm sm:text-base" />
             </div>
             <p className="text-sm sm:text-base">24/7 customer support</p>
@@ -143,7 +144,7 @@ export default function Register() {
           </div>
 
           <button
-            className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70"
+            className="w-full bg-linear-to-r from-amber-500 to-amber-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70"
             onClick={check}
             disabled={loading}
           >

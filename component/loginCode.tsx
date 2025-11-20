@@ -12,6 +12,7 @@ export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const api = process.env.NEXT_PUBLIC_API;
 
   useEffect(() => {
     if (error) {
@@ -34,7 +35,7 @@ export default function Login() {
     if (gmail && password) {
       try {
         const res = await axios.post(
-          "http://localhost:1300/login",
+          `${api}/login`,
           {
             gmail,
             password,
@@ -94,7 +95,7 @@ export default function Login() {
             <p className="text-sm sm:text-base">Sync across all devices</p>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+            <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
               <GiCheckMark className="text-sm sm:text-base" />
             </div>
             <p className="text-sm sm:text-base">Protected with encryption</p>
@@ -154,7 +155,7 @@ export default function Login() {
           </div>
 
           <button
-            className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-70"
+            className="w-full bg-linear-to-r from-amber-500 to-amber-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-70"
             onClick={validate}
             disabled={loading}
           >
