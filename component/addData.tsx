@@ -25,6 +25,7 @@ export default function AddData() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const api = process.env.NEXT_PUBLIC_API;
+  const liveApi = process.env.NEXT_PUBLIC_DEPLOYED_API;
 
   useEffect(() => {
     if (error) {
@@ -62,7 +63,7 @@ export default function AddData() {
         try {
           const id = data.id;
           const res = await axios.put(
-            `${api}/edit-data/${id}`,
+            `${liveApi}/edit-data/${id}`,
             {
               contactname: fullname,
               contact: number,
@@ -105,7 +106,7 @@ export default function AddData() {
       } else {
         try {
           const res = await axios.post(
-            `${api}/save-data`,
+            `${liveApi}/save-data`,
             {
               contactname: fullname,
               contact: number,

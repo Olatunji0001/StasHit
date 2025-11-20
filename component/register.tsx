@@ -14,6 +14,7 @@ export default function Register() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const api = process.env.NEXT_PUBLIC_API;
+  const liveApi = process.env.NEXT_PUBLIC_DEPLOYED_API;
 
   useEffect(() => {
     if (error) {
@@ -30,7 +31,7 @@ export default function Register() {
 
     if (fullname && email && password) {
       try {
-        const res = await axios.post(`${api}/register`, {
+        const res = await axios.post(`${liveApi}/register`, {
           fullname,
           gmail: email,
           password,

@@ -14,6 +14,7 @@ export default function Otp() {
   const [loading, setLoading] = useState(false)
   const router = useRouter();
   const api = process.env.NEXT_PUBLIC_API;
+  const liveApi = process.env.NEXT_PUBLIC_DEPLOYED_API;
 
   useEffect(() => {
     const message = localStorage.getItem("gmail") || "";
@@ -41,7 +42,7 @@ export default function Otp() {
     if (email && otp) {
       try {
         const res = await axios.post(
-          `${api}/verify`,
+          `${liveApi}/verify`,
           {
             gmail: email,
             otp,
