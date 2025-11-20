@@ -1,3 +1,4 @@
+import Link from "next/link"
 export default function Footer() {
     return (
         <section className="bg-[#1F2937] py-6 sm:py-8 lg:py-10">
@@ -5,13 +6,13 @@ export default function Footer() {
                 <div className="text-center">
                     <p className="text-white text-sm sm:text-base lg:text-lg">
                         © 2025 StasHit. All rights reserved. |{" "}
-                        <a href="#" className="hover:text-amber-300 transition-colors duration-200">
+                        <Link href="#" className="hover:text-amber-300 transition-colors duration-200">
                             Privacy Policy
-                        </a>{" "}
+                        </Link>{" "}
                         |{" "}
-                        <a href="#" className="hover:text-amber-300 transition-colors duration-200">
+                        <Link href="#" className="hover:text-amber-300 transition-colors duration-200">
                             Terms of Service
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>
