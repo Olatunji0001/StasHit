@@ -136,6 +136,7 @@ export default function AddData() {
         } catch (error: any) {
           if (error.response.status === 401) {
             const message = error.response.data.message;
+            toast.error(message)
             setTimeout(() => {
               router.push("/sign-up");
             }, 1300);
@@ -144,9 +145,6 @@ export default function AddData() {
             const message = error.response.data.message;
             setError(message);
             setLoading(false);
-            setTimeout(() => {
-              router.push("/sign-up");
-            }, 1300);
           } else {
             setError("try again later");
             console.log(error.message);
