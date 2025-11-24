@@ -36,7 +36,7 @@ export default function Login() {
     if (gmail && password) {
       try {
         const res = await axios.post(
-          `${api}/login`,
+          `${liveApi}/login`,
           {
             gmail,
             password,
