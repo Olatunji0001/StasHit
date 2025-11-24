@@ -63,7 +63,7 @@ export default function AddData() {
         try {
           const id = data.id;
           const res = await axios.put(
-            `${liveApi}/edit-data/${id}`,
+            `${api}/edit-data/${id}`,
             {
               contactname: fullname,
               contact: number,
@@ -106,7 +106,7 @@ export default function AddData() {
       } else {
         try {
           const res = await axios.post(
-            `${liveApi}/save-data`,
+            `${api}/save-data`,
             {
               contactname: fullname,
               contact: number,

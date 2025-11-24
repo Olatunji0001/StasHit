@@ -27,7 +27,7 @@ export default function Dashboard() {
   useEffect(() => {
     const getdata = async () => {
       try {
-        const res = await axios.get(`${liveApi}/get-data`, {
+        const res = await axios.get(`${api}/get-data`, {
           withCredentials: true,
         });
         if (res.status === 204) {
@@ -58,7 +58,7 @@ export default function Dashboard() {
       if (result) {
         const id = event.currentTarget.dataset.id;
         const res = await axios.delete(
-          `${liveApi}/delete-data/${id}`,
+          `${api}/delete-data/${id}`,
           {
             withCredentials: true,
           }
