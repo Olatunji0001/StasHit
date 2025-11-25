@@ -52,18 +52,20 @@ export default function Login() {
           setLoading(false);
         }
       } catch (error: any) {
-        if (error.response === 400) {
+        if (error.response.status === 400) {
           const message = error.response.data.message;
-          router.push("/sign-up")
           setError(message);
           setLoading(false);
+          setTimeout(() => {
+            router.push("/sign-up");
+          }, 5000);
         }
         if (error.response) {
-          const message = error.response.data.message
+          const message = error.response.data.message;
           setError(message);
           setLoading(false);
         } else {
-          console.log(error.message); 
+          console.log(error.message);
           toast.error("Network or server error, try again later");
           setLoading(false);
         }
