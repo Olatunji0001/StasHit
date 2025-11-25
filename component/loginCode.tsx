@@ -52,8 +52,14 @@ export default function Login() {
           setLoading(false);
         }
       } catch (error: any) {
-        if (error.response) {
+        if (error.response === 400) {
           const message = error.response.data.message;
+          router.push("/sign-up")
+          setError(message);
+          setLoading(false);
+        }
+        if (error.response) {
+          const message = error.response.data.message
           setError(message);
           setLoading(false);
         } else {
