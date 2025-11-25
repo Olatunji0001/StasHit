@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href={"/"} className="text-2xl sm:text-3xl md:text-4xl font-bold hover:opacity-90 transition-opacity">
-            StasHit
+            StashIt
           </Link>
 
           {/* Desktop Links */}

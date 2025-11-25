@@ -5,7 +5,7 @@ export default function Footer() {
             <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="text-center">
                     <p className="text-white text-sm sm:text-base lg:text-lg">
-                        © 2025 StasHit. All rights reserved. |{" "}
+                        © 2025 StashIt. All rights reserved. |{" "}
                         <Link href="#" className="hover:text-amber-300 transition-colors duration-200">
                             Privacy Policy
                         </Link>{" "}

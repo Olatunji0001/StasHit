@@ -67,7 +67,7 @@ export default function Register() {
       {/* Left Panel - Brand & Features */}
       <div className="w-full lg:w-1/2 bg-linear-to-b from-amber-500 to-amber-600 text-white flex flex-col justify-center items-center p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6">
         <Link href={"/"}>
-          <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">StasHit</p>
+          <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">StashIt</p>
         </Link>
         <p className="text-center text-base sm:text-lg lg:text-lg opacity-95 max-w-md">
           Join thousands of users who never worry about losing their contacts again.

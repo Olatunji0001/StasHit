@@ -74,20 +74,20 @@ export default function Login() {
             href={"/"}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center"
           >
-            StasHit
+            StashIt
           </Link>
           <p className="text-center text-base sm:text-lg lg:text-xl opacity-95 max-w-md">
             Welcome back! Access your safely stored contacts anytime, anywhere.
           </p>
           <div className="w-full max-w-xs sm:max-w-sm space-y-3 sm:space-y-4 mt-4 sm:mt-6 lg:mt-8">
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+              <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
                 <GiCheckMark className="text-sm sm:text-base" />
               </div>
               <p className="text-sm sm:text-base">Secure cloud storage</p>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+              <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
                 <GiCheckMark className="text-sm sm:text-base" />
               </div>
               <p className="text-sm sm:text-base">
@@ -95,7 +95,7 @@ export default function Login() {
               </p>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 flex-shrink-0">
+              <div className="rounded-full bg-[#EFA73A] p-1.5 sm:p-2 shrink-0">
                 <GiCheckMark className="text-sm sm:text-base" />
               </div>
               <p className="text-sm sm:text-base">Sync across all devices</p>

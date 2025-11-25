@@ -41,7 +41,7 @@ export default function About() {
     <section id="about">
       <div className="my-8 sm:my-12 lg:my-15 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl lg:text-[40px] text-[#78350F] font-bold text-center mb-6 sm:mb-8 lg:mb-10">
-          Why Choose StasHit?
+          Why Choose StashIt?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {about.map((item) => (

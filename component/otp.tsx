@@ -75,22 +75,22 @@ export default function Otp() {
  return (
   <div className="min-h-screen bg-[#FEF7DC] flex items-center justify-center p-4 sm:p-6 lg:p-8">
     <div className="w-full max-w-6xl flex flex-col lg:flex-row rounded-none sm:rounded-xl lg:rounded-2xl shadow-none sm:shadow-lg lg:shadow-xl overflow-hidden">
-      {/* Left Panel - Brand & Features */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-b from-amber-500 to-amber-600 text-white flex items-center justify-center p-6 sm:p-8 lg:p-10 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
+      {/* Left Panel - Brand & Features */}     
+      <div className="w-full lg:w-1/2 bg-linear-to-b from-amber-500 to-amber-600 text-white flex items-center justify-center p-6 sm:p-8 lg:p-10 rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
         <div className="text-center max-w-md">
           <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-[50px] font-bold mb-4 sm:mb-6">
-            StasHit
+            StashIt
           </p>
           <p className="text-base sm:text-lg lg:text-[18px] mb-6 sm:mb-8 leading-relaxed">
             We're verifying your email to keep your contacts secure.
           </p>
           <div className="space-y-4 sm:space-y-5 lg:space-y-6">
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
-              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] flex-shrink-0" />
+              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] shrink-0" />
               <p className="text-sm sm:text-base lg:text-lg">Quick verification process</p>
             </div>
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
-              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] flex-shrink-0" />
+              <GiCheckMark className="text-lg sm:text-xl lg:text-[20px] shrink-0" />
               <p className="text-sm sm:text-base lg:text-lg">Secure account protection</p>
             </div>
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-5">
